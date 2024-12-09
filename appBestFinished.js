@@ -106,13 +106,13 @@ const generatePasswords = () => {
     //but I want 15 random characters from the characters array
     // password1 += characters[i]
     //console.log(password1); // I get the first 15 characters BUT I want to get a random character each time NOT the first 15 from the characters array - so we must change [i] to be a randomNumber
-    password1 += characters[Math.floor(Math.random() * characters.length)];
+    password1 += characters[Math.ceil(Math.random() * characters.length)];
   }
   //console.log(password1);
   displayBoxLeft.textContent = password1;
 
   for (let i = 0; i < 15; i++) {
-    password2 += characters[Math.floor(Math.random() * characters.length)];
+    password2 += characters[Math.ceil(Math.random() * characters.length)];
   }
   // console.log(password2);
   displayBoxRight.textContent = password2;
